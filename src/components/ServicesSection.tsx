@@ -37,27 +37,35 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section id="servicios" className="py-20 bg-primary-dark text-white">
-      <div className="mx-auto max-w-6xl px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section id="servicios" className="py-28 bg-primary-dark text-white relative overflow-hidden">
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gold rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold rounded-full blur-3xl" />
+      </div>
+
+      <div className="mx-auto max-w-6xl px-6 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <p className="text-gold font-medium tracking-[0.2em] uppercase text-sm mb-4">
+              Nuestros Servicios
+            </p>
+            <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-5xl font-bold mb-6 leading-tight">
               Todo lo que necesitás
               <br />
-              <span className="text-accent-light">en un solo lugar</span>
+              <span className="text-gradient-gold">en un solo lugar</span>
             </h2>
-            <p className="text-gray-300 mb-8 leading-relaxed">
-              En Balestra Automotores ofrecemos una solución integral: desde la
-              elección de tu vehículo hasta la gestoría completa. Trabajamos con
-              las mejores marcas y condiciones del mercado.
+            <p className="text-gray-400 mb-10 leading-relaxed text-lg">
+              Ofrecemos una solución integral: desde la elección de tu vehículo
+              hasta la gestoría completa. Trabajamos con las mejores marcas y
+              condiciones del mercado.
             </p>
-            <ul className="space-y-4">
+            <ul className="space-y-5">
               {services.map((service) => (
-                <li key={service.title} className="flex items-start gap-3">
-                  <FaCheckCircle className="text-accent-light mt-1 shrink-0" />
+                <li key={service.title} className="flex items-start gap-4">
+                  <FaCheckCircle className="text-gold mt-1 shrink-0" />
                   <div>
-                    <span className="font-semibold">{service.title}</span>
-                    <p className="text-sm text-gray-400">
+                    <span className="font-semibold text-white/95">{service.title}</span>
+                    <p className="text-sm text-gray-400 mt-0.5">
                       {service.description}
                     </p>
                   </div>
@@ -67,36 +75,36 @@ export default function ServicesSection() {
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            <div className="relative h-64 rounded-2xl overflow-hidden">
+            <div className="relative h-64 rounded-2xl overflow-hidden ring-1 ring-white/10">
               <Image
-                src="/images/hero/ford-ranger.png"
-                alt="Ford Ranger en Balestra"
+                src="/images/vehicles/chevrolet-cruze-ltz.png"
+                alt="Chevrolet Cruze LTZ en Balestra"
                 fill
-                className="object-cover"
+                className="object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
-            <div className="relative h-64 rounded-2xl overflow-hidden mt-8">
+            <div className="relative h-64 rounded-2xl overflow-hidden mt-10 ring-1 ring-white/10">
               <Image
-                src="/images/vehicles/gol-power-2013.png"
-                alt="Volkswagen Gol en Balestra"
+                src="/images/vehicles/vw-saveiro-roja.png"
+                alt="Volkswagen Saveiro en Balestra"
                 fill
-                className="object-cover"
+                className="object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
-            <div className="relative h-64 rounded-2xl overflow-hidden">
+            <div className="relative h-64 rounded-2xl overflow-hidden ring-1 ring-white/10">
               <Image
                 src="/images/gallery/tractores.png"
                 alt="Maquinaria Taurus Vialen"
                 fill
-                className="object-cover"
+                className="object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
-            <div className="relative h-64 rounded-2xl overflow-hidden mt-8">
+            <div className="relative h-64 rounded-2xl overflow-hidden mt-10 ring-1 ring-white/10">
               <Image
-                src="/images/about/exterior-local.png"
-                alt="Local Balestra Automotores"
+                src="/images/vehicles/ford-ranger-gris.png"
+                alt="Ford Ranger en Balestra"
                 fill
-                className="object-cover"
+                className="object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
           </div>

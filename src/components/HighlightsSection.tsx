@@ -29,28 +29,27 @@ const highlights = [
 
 export default function HighlightsSection() {
   return (
-    <section className="py-20 bg-surface">
-      <div className="mx-auto max-w-6xl px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+    <section className="py-24 bg-white relative">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="text-center mb-16 section-divider pt-8">
+          <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold text-primary mb-4">
             ¿Por qué elegirnos?
           </h2>
-          <p className="text-muted max-w-2xl mx-auto">
-            En Balestra Automotores te brindamos una experiencia de compra
-            transparente, segura y personalizada.
+          <p className="text-muted max-w-2xl mx-auto text-lg">
+            Una experiencia de compra transparente, segura y personalizada.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {highlights.map((item) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {highlights.map((item, i) => (
             <div
               key={item.title}
-              className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-shadow text-center"
+              className="card-premium p-8 text-center group"
             >
-              <div className="inline-flex items-center justify-center w-14 h-14 bg-primary/10 text-primary rounded-xl mb-4">
-                <item.icon size={26} />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-gold/10 to-gold/5 text-gold rounded-2xl mb-5 group-hover:scale-110 transition-transform duration-300">
+                <item.icon size={28} />
               </div>
-              <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+              <h3 className="text-lg font-semibold mb-3">{item.title}</h3>
               <p className="text-sm text-muted leading-relaxed">
                 {item.description}
               </p>
